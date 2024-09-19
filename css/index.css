@@ -13,7 +13,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 20px;
     text-align: left;
@@ -27,7 +27,15 @@ header {
 header h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    text-shadow: 5px 5px 20px rgb(254, 250, 250);
+    text-shadow: 5px 5px 17px rgb(254, 250, 250);
+    text-align: center;
+}
+.subtitle {
+    font-size: 1.5em;
+    color: #ff99ff;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
 }
 
 nav {
@@ -47,7 +55,7 @@ nav ul li a {
     text-decoration: none;
     color: yellow;
     font-size: 1.2em;
-    background-color: rgba(0, 0, 255, 0.3);
+    background-color: rgba(0, 0, 255, 0.1);
     padding: 10px 20px;
     /* border-radius: 8px; */
 }
@@ -125,7 +133,7 @@ footer {
 }
 
 footer strong {
-    color: yellow;
+    color: white;
 }
 
 footer p {

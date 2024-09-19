@@ -13,7 +13,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -54,7 +54,7 @@ nav ul li a {
     text-decoration: none;
     color: yellow;
     font-size: 1.2em;
-    background-color: rgba(0, 0, 255, 0.3);
+    background-color: rgba(0, 0, 255, 0.1);
     padding: 10px 20px;
     /* border-radius: 8px; */
 }
@@ -101,7 +101,7 @@ footer {
 }
 
 footer strong {
-    color: yellow;
+    color: white;
 }
 
 footer p {
