@@ -1,57 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Victor Manuel Arbeláez Ramírez">
-    <meta name="description" content="Parcial 1 de Desarrollo de Aplicaciones Web 2024-2 UDEA" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primer Parcial - Desarrollo de Aplicaciones Web</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" href="./pics/favicon-32x32.png" type="image/png">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Primer Parcial Desarrollo De Aplicaciones Web (Par)</h1>
-            <span class="subtitle">HTML + CSS</span>
-            <nav>
-                <ul>
-                    <li><a href="#">INICIO</a></li>
-                    <li><a href="pareshtml.html">HTML</a></li>
-                    <li><a href="parescss.html">CSS</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section class="content">
-            <div class="box dns">
-                <h2>DNS</h2>
-                <p>Nos permite hablar con los servidores en internet sin necesidad de aprendernos sus direcciones IP.</p>
-                <img src="./pics/DNS_logo.png" alt="DNS Logo" class="logos">
-            </div>
-            <div class="box html">
-                <h2>HTML</h2>
-                <p>Lenguaje de marcado con el que declaramos la estructura de una página web. Consiste de elementos anidados y cada elemento tiene unos atributos que permiten modificar su comportamiento.</p>
-                <img src="./pics/128px-HTML5_logo_resized.svg.png" alt="HTML Logo" class="logos">
-            </div>
-            <div class="box tcpip">
-                <h2>TCP/IP</h2>
-                <p>TCP/IP es un conjunto de protocolos de red que permiten la comunicación entre dispositivos informáticos, incluyendo ordenadores y otros dispositivos, en una red o entre redes, incluyendo la Internet.</p>
-                <img src="./pics/Aha-Soft-Free-Global-Security-Global-Network.512.png" alt="TCP/IP Logo" class="logos">
-            </div>
-            <div class="box css">
-                <h2>CSS</h2>
-                <p>Es un lenguaje de estilos que nos permite definir cómo queremos que se vea nuestra página. CSS se encarga de definir cómo debe ser renderizado el elemento estructurado en la pantalla.</p>
-                <img src="./pics/w3_css-official.svg" alt="DNS Logo" class="logos">
-            </div>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>API CRUD App</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+    <header>
+        <h1>Listado de Usuarios/Foods</h1>
+    </header>
+    <main>
+        <section id="item-list"></section>
+        <section id="form-section">
+        <form id="item-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Guardar</button>
+        </form>
         </section>
-
-        <footer>
-            <p>Desarrollado Por: <strong><i>Victor Manuel Arbeláez Ramírez</i></strong></p>
-            <p>Universidad De Antioquia</p>
-            <p>2024-2</p>
-        </footer>
-    </div>
-</body>
+    </main>
+    <script type="module" src="js/main.js"></script>
+    </body>
 </html>
