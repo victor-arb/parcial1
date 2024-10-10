@@ -7,17 +7,49 @@ export class DOMManager {
     renderItems(items) {
       this.container.innerHTML = ''; // Limpia el contenedor antes de renderizar
       items.forEach(item => {
-        const itemElement = document.createElement('div');
-        itemElement.classList.add('item');
-        itemElement.textContent = item.name;
+        const itemElement = this.createUserCard(item);
         itemElement.addEventListener('click', () => this.populateForm(item));
         this.container.appendChild(itemElement);
       });
     }
   
+    renderSingleItem(item) {
+      this.container.innerHTML = ''; // Limpia el contenedor
+      const itemElement = this.createUserCard(item);
+      this.container.appendChild(itemElement);
+    }
+  
+    createUserCard(user) {
+      const card = document.createElement('div');
+      card.classList.add('user-card');
+  
+      const img = document.createElement('img');
+      img.src = user.photo;
+      img.alt = `${user.firstName} ${user.lastName}`;
+      card.appendChild(img);
+  
+      const name = document.createElement('h2');
+      name.textContent = `${user.firstName} ${user.lastName}`;
+      card.appendChild(name);
+  
+      const job = document.createElement('p');
+      job.textContent = `Cargo: ${user.jobTitle}`;
+      card.appendChild(job);
+  
+      const email = document.createElement('p');
+      email.textContent = `Email: ${user.email}`;
+      card.appendChild(email);
+  
+      const phone = document.createElement('p');
+      phone.textContent = `Teléfono: ${user.phone}`;
+      card.appendChild(phone);
+  
+      return card;
+    }
+  
     populateForm(item) {
-      this.form.name.value = item.name;
-      this.form.dataset.id = item.id; // Guarda el id en un atributo data
+      this.form.name.value = item.firstName;
+      this.form.dataset.id = item.id;
     }
   
     clearForm() {
@@ -26,7 +58,8 @@ export class DOMManager {
     }
   
     showMessage(message, type = 'success') {
-      console.log(message); // Se puede mejorar para mostrar en el DOM o usar alert()
+      alert(message);
     }
   }
+  
   

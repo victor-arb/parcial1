@@ -14,6 +14,17 @@ export class APIService {
       }
     }
   
+    async fetchSingleItem(endpoint, id) {
+      try {
+        const response = await fetch(`${this.baseUrl}/${endpoint}/${id}`);
+        if (!response.ok) throw new Error('Usuario no encontrado');
+        return await response.json();
+      } catch (error) {
+        console.error(error);
+        return null;
+      }
+    }
+  
     async createItem(endpoint, item) {
       try {
         const response = await fetch(`${this.baseUrl}/${endpoint}`, {

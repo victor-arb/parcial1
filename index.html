@@ -13,15 +13,33 @@
         <h1>Listado de Usuarios</h1>
     </header>
     <main>
-        <section id="item-list"></section>
-        <section id="form-section">
-            <form id="item-form">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-                <button type="submit">Guardar</button>
-            </form>
-        </section>
-    </main>
+        <h1>Gestión de Usuarios</h1>
+      
+        <!-- Botón para consultar todos los usuarios -->
+        <button id="load-all-btn">Consultar Todos los Usuarios</button>
+      
+        <!-- Formulario para consultar un usuario por ID -->
+        <div id="single-user-form-section">
+          <form id="single-user-form">
+            <label for="userId">Consultar Usuario por ID:</label>
+            <input type="text" id="userId" name="userId" placeholder="Ingrese el ID del usuario">
+            <button type="submit">Consultar</button>
+          </form>
+        </div>
+      
+        <!-- Formulario para crear o actualizar un usuario -->
+        <div id="form-section">
+          <form id="item-form">
+            <label for="name">Nombre del Usuario:</label>
+            <input type="text" id="name" name="name" placeholder="Nombre">
+            <button type="submit">Guardar Usuario</button>
+          </form>
+        </div>
+      </main>
+
+      <!-- Contenedor de la lista de usuarios -->
+      <div id="item-list"></div>
+      
     <script type="module" src="js/main.js"></script>
     </body>
 </html>

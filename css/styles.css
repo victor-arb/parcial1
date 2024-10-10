@@ -1,61 +1,99 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+/* General container styling */
+#main {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-  }
-  
-  main {
-    width: 100%;
-    max-width: 400px;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+    justify-content: center;
   }
-  
-  h1 {
-    font-size: 20px;
-    color: #333;
-    text-align: center;
-    margin-right: 100px;
-  }
-  
-  #item-list .item {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-  }
-  
-  #item-form {
+
+  #item-list {
+    margin: 0 auto;
+    width: 80vw;
+    max-width: 700px;
     display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    
   }
   
-  #item-form label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  #item-form input[type="text"] {
-    padding: 8px;
-    margin-bottom: 10px;
+  /* User card styling */
+  .user-card {
+    background-color: #f5f5f5;
     border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
   }
   
-  #item-form button[type="submit"] {
-    padding: 8px;
-    background-color: #007bff;
-    color: #ffffff;
+  .user-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .user-card img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .user-card h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0 5px;
+  }
+  
+  .user-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* Style for buttons */
+  button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #4CAF50;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
   }
   
-  #item-form button[type="submit"]:hover {
-    background-color: #0364cc;
+  button:hover {
+    background-color: #45a049;
   }
+  
+  /* Additional form styling */
+  form {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 300px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  form input, form button {
+    width: 100%;
+    margin: 8px 0;
+  }
+  
+  form input[type="text"], form input[type="email"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
