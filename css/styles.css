@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #item-list .item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+  
+  #form-section {
+    margin-top: 20px;
+  }
+  
