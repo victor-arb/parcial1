@@ -3,43 +3,51 @@
     <head>
         <meta charset="UTF-8">
         <meta name="author" content="Victor Manuel Arbeláez Ramírez">
-        <meta name="description" content="Parcial 2 para Desarrollo de Aplicaciones Web">
+        <meta name="description" content="Parcial 2 para la materia Desarrollo de Aplicaciones Web, cedula terminada en par">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>API CRUD App</title>
+        <title>Gestión de Usuarios</title>
         <link rel="stylesheet" href="./css/styles.css">
     </head>
     <body>
     <header>
-        <h1>Listado de Usuarios</h1>
-    </header>
-    <main>
         <h1>Gestión de Usuarios</h1>
-      
-        <!-- Botón para consultar todos los usuarios -->
-        <button id="load-all-btn">Consultar Todos los Usuarios</button>
-      
-        <!-- Formulario para consultar un usuario por ID -->
-        <div id="single-user-form-section">
-          <form id="single-user-form">
-            <label for="userId">Consultar Usuario por ID:</label>
-            <input type="text" id="userId" name="userId" placeholder="Ingrese el ID del usuario">
-            <button type="submit">Consultar</button>
-          </form>
-        </div>
-      
-        <!-- Formulario para crear o actualizar un usuario -->
-        <div id="form-section">
-          <form id="item-form">
-            <label for="name">Nombre del Usuario:</label>
-            <input type="text" id="name" name="name" placeholder="Nombre">
-            <button type="submit">Guardar Usuario</button>
-          </form>
-        </div>
-      </main>
+        <button id="loadUsersBtn">Consultar Todos los Usuarios</button>
+    </header>
 
-      <!-- Contenedor de la lista de usuarios -->
-      <div id="item-list"></div>
-      
-    <script type="module" src="js/main.js"></script>
+    <!--Se llenara con el contenido de los usuarios consultados-->
+    <main id="main"></main>
+
+    <section class="user-id">
+        <h2>Buscar Usuario por ID</h2>
+        <input type="text" id="userIdInput" placeholder="ID de usuario">
+        <button id="loadUserBtn">Consultar Usuario por ID</button>
+    </section>
+
+    <section class="user-update">
+        <h2>Crear/Actualizar Usuario</h2>
+        <form id="userForm">
+            <label for="firstName">Nombre:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <label for="lastName">Apellido:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="jobTitle">Cargo:</label>
+            <input type="text" id="jobTitle" name="jobTitle">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Teléfono:</label>
+            <input type="text" id="phone" name="phone">
+
+            <label for="photo">Foto (URL):</label>
+            <input type="text" id="photo" name="photo">
+
+            <button type="submit">Guardar Usuario</button>
+        </form>
+    </section>
+
+    <script type="module" src="./modules/main.js"></script>
     </body>
 </html>
