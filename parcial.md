@@ -18,20 +18,6 @@ A partir del diagrama E-R dado construya:
     * /doctor/appointment/:appointmentId
       * PUT: editar una cita específica (paciente, fecha, hora)
       * DELETE: eliminar una cita específica
-  * Paciente (la suma de los últimos 3 dígitos del documentos es par):
-    * /patient/login: inicia sesión como paciente, usando email y password. Retorna JWT con 30 minutos de vigencia
-    * /patient/appointment
-      * GET: listar todas las citas asignadas al paciente
-        * Se puede filtrar por fecha, pasando un query string: [?date=<DD-MM-YYYY>]
-        * Por ejemplo: /doctor/appointment?date=20-11-2024 mostrará las citas del paciene para esa fecha
-      * POST: asignar una nueva cita al paciente (medico, fecha, hora)
-    * /patient/appointment/:appointmentId
-      * PUT: editar una cita específica (medico, fecha, hora)
-      * DELETE: eliminar una cita específica
-    * /doctor/:doctorId
-      * GET: Obtener los datos del médico especificado
-    * /doctor/:doctorId/appointment
-      * GET: listar todas las citas asignadas al médico especificado  
 * docker compose para correr los dos servicios (db y api)
   * Mantener los datos sensibles en variables de entorno de los servicios o archivos .env
 # Restricciones
